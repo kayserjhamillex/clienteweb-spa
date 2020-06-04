@@ -1,0 +1,11 @@
+.casillero {
+  float: left;
+}
+.fondo {
+  background-image: url("../../../assets/img/fondo1.png");
+  /* background-image: url("../../../../../assets/img/fondo2.png"); */
+  background-size: cover;
+}
+.oscuro {
+  font-weight: 1000;
+}

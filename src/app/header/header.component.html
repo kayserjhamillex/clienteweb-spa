@@ -1,0 +1,122 @@
+<div class="site-wrap">
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body">
+    </div>
+  </div>
+  <header class="site-navbar" role="banner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-11 col-xl-4">
+          <h1 class="mb-0 site-logo">
+            <a [routerLink]="['/pages/home']" class="text-white mb-0">
+              PhysicalTherapy
+              <span class="text-primary">
+                .
+              </span>
+            </a>
+          </h1>
+        </div>
+        <div class="col-12 col-md-8 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li class="active">
+                <a [routerLink]="['/pages/home']">
+                  <span>
+                    Home
+                  </span>
+                </a>
+              </li>
+              <li class="has-children">
+                <a [routerLink]="['/pages/services']">
+                    Servicios
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown">
+                  <li>
+                    <a [routerLink]="['/pages/services']">
+                      Physical Therapy
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a [routerLink]="['/pages/about']">
+                  <span>
+                    Nosotros
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/pages/blog']">
+                  <span>
+                    Blog
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/pages/contact']">
+                  <span>
+                    Contacto
+                  </span>
+                </a>
+              </li>
+              <li *ngIf="!haycliente" class="has-children">
+                <a>
+                    Usuario
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown">
+                  <li>
+                    <a [routerLink]="['/app/register']">
+                      Registrar
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/app/login']">
+                      Iniciar Secion
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li *ngIf="haycliente" class="has-children">
+                <a>
+                    {{client.Fullname}}
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown">
+                  <li>
+                    <a [routerLink]="['/app/client-profile']">
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/app/client-booking']">
+                      Booking
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" (click)="loggout()">
+                      Cerrar Secion
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+          <a href="#" class="site-menu-toggle js-menu-toggle text-white">
+              <i class="fas fa-bars"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

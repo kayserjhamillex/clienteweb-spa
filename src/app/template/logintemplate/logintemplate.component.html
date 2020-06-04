@@ -1,0 +1,57 @@
+<div class="col-12 col-md-6 cajas">
+  <div class="col-12">
+    <div class="col-12">
+      <h3 class="text-center">
+        Login con Redes Sociales
+      </h3>
+    </div>
+    <button type="button" (click)="accederConGoogle()" class="btn btn-danger btn-block">
+      <i class="fab fa-google"></i>
+      Login con Google
+    </button>
+    <br>
+    <button type="button" (click)="accederConFacebook()" class="btn btn-danger btn-block">
+      <i class="fab fa-facebook"></i>
+      Login con Facebook
+    </button>
+  </div>
+</div>
+<div class="col-12 col-md-6 cajas">
+  <div class="col-12">
+    <div class="col-12">
+      <h3 class="text-center">
+        Login sin Redes Sociales
+      </h3>
+    </div>
+    <form id="formLoginsinRedes" name="formLoginsinRedes">
+      <div class="col-12">
+        <label class="text-black" for="correo">
+          Correo
+        </label>
+        <br>
+        <input type="email" name="correo" [(ngModel)]="parametro.correo" class="inputs text-center form-control">
+        <br>
+      </div>
+      <div class="col-12">
+        <label class="text-black" for="contra">
+          Contrasena
+        </label>
+        <br>
+        <input type="password" name="contra" [(ngModel)]="parametro.contra" class="inputs text-center form-control">
+        <br>
+      </div>
+      <div class="col-12">
+        <br>
+        <button type="submit" class="btn btn-danger btn-block" (click)="login()">
+          Iniciar Secion
+        </button>
+      </div>
+      <div class="col-12">
+        <br>
+        <a [routerLink]="['/pages/recover']" style="color: blue;">
+          forget password
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Template Client</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/icon/logaso.png" />
+  <meta name="description" content="Jx - Free Angular Spa Template">
+  <meta name="author" content="Anibal Jhamil Huaman Verastein">
+  <meta name="keyword" content="Bootstrap,Client,Template,Free,Angular,Typescript">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1e1601404f.js" crossorigin="anonymous"></script>
+  <!-- las iconos que tomamos -->
+  <link type="text/css" href="src/assets/fonts/icomoon/style.css">
+  <link type="text/css" href="src/assets/fonts/flaticon/font/flaticon.css">
+  <!-- los styles que tomamos :) -->
+  <!-- <link type="text/css" href="./styles.css"> -->
+  <link type="text/css" href="src/assets/css/bootstrap.min.css">
+  <link type="text/css" href="src/assets/css/magnific-popup.css">
+  <link type="text/css" href="src/assets/css/jquery-ui.css">
+  <link type="text/css" href="src/assets/css/owl.carousel.min.css">
+  <link type="text/css" href="src/assets/css/owl.theme.default.min.css">
+  <link type="text/css" href="src/assets/css/bootstrap-datepicker.css">
+  <link type="text/css" href="src/assets/css/aos.css">
+  <link type="text/css" href="src/assets/css/rangeslider.css">
+  <link type="text/css" href="src/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- culqi -->
+  <script src="https://checkout.culqi.com/js/v3"></script>
+  <script>
+    function culqi(){
+      var wakandaaforever = document.getElementById('wakandaaa');
+      var wakandaforever = document.getElementById('wakanda');
+      if (Culqi.token) {
+        var token = Culqi.token;
+        var payment_event = new CustomEvent('payment_event', { detail: token });
+        document.dispatchEvent(payment_event);
+        wakandaforever.style.display='inline';
+        wakandaaforever.style.display='none';
+      } else if(Culqi.error) {
+        var error = Culqi.error;
+        var payment_event_error = new CustomEvent('payment_event_error', { detail: error });
+        document.dispatchEvent(payment_event_error);
+        wakandaforever.style.display='none';
+        wakandaaforever.style.display='inline';
+      }
+    };
+  </script>
+</head>
+<body class="mat-typography">
+  <app-root></app-root>
+  <!-- <script type="text/js" src="src/assets/js/jquery-3.3.1.min.js"></script> -->
+  <!-- <script src="src/assets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="src/assets/js/jquery-ui.js"></script>
+  <script src="src/assets/js/popper.min.js"></script>
+  <script src="src/assets/js/bootstrap.min.js"></script>
+  <script src="src/assets/js/owl.carousel.min.js"></script>
+  <script src="src/assets/js/jquery.stellar.min.js"></script>
+  <script src="src/assets/js/jquery.countdown.min.js"></script>
+  <script src="src/assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="src/assets/js/jquery.animateNumber.min.js"></script>
+  <script src="src/assets/js/jquery.waypoints.min.js"></script>
+  <script src="src/assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="src/assets/js/aos.js"></script>
+  <script src="src/assets/js/rangeslider.min.js"></script> -->
+  <!-- <script src="src/assets/js/typed.js"></script>
+  <script>
+    var typed = new Typed('.typed-words', {
+      strings: ["pain"," stress"," fatigue"],
+      typeSpeed: 80,
+      backSpeed: 80,
+      backDelay: 4000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+    });
+  </script>
+  <script src="src/assets/js/main.js"></script> -->
+</body>
+</html>

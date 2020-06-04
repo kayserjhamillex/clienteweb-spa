@@ -1,0 +1,9 @@
+.separador {
+  float: left;
+}
+.cambio {
+  background-color:#343a40!important;
+}
+.cambio:hover {
+  background-color: crimson!important;
+}

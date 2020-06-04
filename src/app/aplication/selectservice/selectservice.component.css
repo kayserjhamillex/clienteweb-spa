@@ -1,0 +1,12 @@
+.tamanio{
+  font-size: 1rem;
+}
+.eleccion{
+  color: #ea728c;
+}
+.eleccion:hover{
+  color: #e02f56;
+}
+.cajas{
+  float: left;
+}
