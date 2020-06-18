@@ -29,8 +29,8 @@ export class SelectserviceComponent implements OnInit {
     Name: '',
     Resumen: '',
     Descripcion: '',
-    Iconoservicio: '',
-    Imagenservicio: '',
+    IconoServicioS: '',
+    ImagenServicioS: '',
     Monto: ''
   };
   nombreservicio;

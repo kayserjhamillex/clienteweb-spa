@@ -5,7 +5,7 @@ export interface Servicio {
   Name?: string,
   Resumen?: string,
   Descripcion?: string,
-  Iconoservicio?: string,
-  Imagenservicio?: string,
+  IconoServicioS?: string,
+  ImagenServicioS?: string,
   Monto?: string
 }

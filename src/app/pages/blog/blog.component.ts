@@ -21,6 +21,8 @@ export class BlogComponent implements OnInit {
       res => {
         if (res) {
           this.blogs = res;
+          console.log(res);
+
         } else {
           this.toastr.error('no se pudo listar los blogs');
         }

@@ -1,10 +1,10 @@
 import { ToastrService } from 'ngx-toastr';
+import { Reserva } from 'src/app/models/reserva';
 import { Cliente } from 'src/app/models/cliente';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { ReservaService } from 'src/app/services/reserva.service';
-import { Reserva } from 'src/app/models/reserva';
 
 @Component({
   selector: 'app-detailbooking',

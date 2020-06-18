@@ -6,6 +6,6 @@ export interface Blog {
   Subtitulo?: string,
   Resumen?: string,
   Descripcion?: string,
-  Imagendelblog?: string,
-  Videodelblog?: string
+  ImagendelBlogS?: string,
+  VideodelBlogS?: string
 }

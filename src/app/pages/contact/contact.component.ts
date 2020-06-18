@@ -26,6 +26,9 @@ export class ContactComponent implements OnInit {
   };
   codigocontacto;
   success: any = [];
+  Address;
+  Phone;
+  Email;
   constructor(
     private router: Router,
     private toastr: ToastrService,
@@ -60,6 +63,9 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.Address = '203 Fake St. Mountain View, San Francisco, California, USA';
+    this.Phone = '+1 232 3235 324';
+    this.Email = 'youremail@domain.com';
   }
 
 }

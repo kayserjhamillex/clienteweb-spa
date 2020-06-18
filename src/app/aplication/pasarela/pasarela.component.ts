@@ -1,15 +1,15 @@
 import { ToastrService } from 'ngx-toastr';
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { ClienteService } from 'src/app/services/cliente.service';
-import { Reservita } from 'src/app/models/reservita';
 import { Cliente } from 'src/app/models/cliente';
-import { CulqiService } from 'src/app/services/culqi.service';
-import { ReservaService } from 'src/app/services/reserva.service';
-import { Servicio } from 'src/app/models/servicio';
-import { ServicioService } from 'src/app/services/servicio.service';
-import { HorarioService } from 'src/app/services/horario.service';
 import { Horario } from 'src/app/models/horario';
+import { Component, OnInit } from '@angular/core';
+import { Servicio } from 'src/app/models/servicio';
+import { Reservita } from 'src/app/models/reservita';
+import { Router, ActivatedRoute } from '@angular/router';
+import { CulqiService } from 'src/app/services/culqi.service';
+import { ClienteService } from 'src/app/services/cliente.service';
+import { ReservaService } from 'src/app/services/reserva.service';
+import { HorarioService } from 'src/app/services/horario.service';
+import { ServicioService } from 'src/app/services/servicio.service';
 
 @Component({
   selector: 'app-pasarela',
@@ -23,8 +23,8 @@ export class PasarelaComponent implements OnInit {
     Name: '',
     Resumen: '',
     Descripcion: '',
-    Iconoservicio: '',
-    Imagenservicio: '',
+    IconoServicioS: '',
+    ImagenServicioS: '',
     Monto: ''
   };
   cliente: Cliente = {

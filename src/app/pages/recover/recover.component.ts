@@ -38,14 +38,14 @@ export class RecoverComponent implements OnInit {
         if (res) {
           this.cliente = res;
           const codigo = this.cliente.id.toString();
-          this.clienteService.getSendRecover(correo, codigo).subscribe(
+          this.clienteService.getSendRecover(codigo, correo).subscribe(
             // tslint:disable-next-line: no-shadowed-variable
             res => {
               if (res) {
                 this.mensaje = res;
                 this.toastr.success('se le envio un correo para poder actualizar su password');
               } else {
-                this.toastr.error('no se pudo enviar el correo de recuperacion')
+                this.toastr.error('no se pudo enviar el correo de recuperacion');
               }
             }
           );

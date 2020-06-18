@@ -10,8 +10,16 @@ import { ServicioService } from 'src/app/services/servicio.service';
 })
 export class HomeComponent implements OnInit {
   servicios: any = [];
-  serviciospares: any = [];
-  serviciosimpares: any = [];
+  testimonios: any = [];
+  happycustomers = 0;
+  yearsexperence = 0;
+  satisfaccion;
+  fundacion = 2014;
+  actual = new Date().getFullYear();
+  celular;
+  correo;
+  horario;
+  direccion;
   constructor(
     private router: Router,
     private toastr: ToastrService,
@@ -30,6 +38,10 @@ export class HomeComponent implements OnInit {
     );
   }
   ngOnInit() {
+    this.yearsexperence = this.actual - this.fundacion;
+    // tenemos que conseguiar acceder al spam al data-number
+    // <span class="block-counter-1-number" data-number="7">0</span>
+    console.log(this.yearsexperence);
     this.GetServicios();
   }
 

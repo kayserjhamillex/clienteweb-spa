@@ -9,7 +9,7 @@ import { MasajistaService } from 'src/app/services/masajista.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  masajista: any = [];
+  masajistas: any = [];
   constructor(
     private router: Router,
     private toastr: ToastrService,
@@ -20,7 +20,9 @@ export class AboutComponent implements OnInit {
     this.masajistaService.getMasajistas().subscribe(
       res => {
         if (res) {
-          this.masajista = res;
+          this.masajistas = res;
+          console.log(res);
+          console.log(this.masajistas);
         } else {
           this.toastr.error('no se pudo listar a los masajistas');
         }

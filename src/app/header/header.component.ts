@@ -1,6 +1,7 @@
 import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../services/cliente.service';
+import { ServicioService } from '../services/servicio.service';
 import { FacebookLoginProvider, GoogleLoginProvider, AuthService, SocialUser } from 'angularx-social-login';
 
 @Component({
@@ -13,11 +14,24 @@ export class HeaderComponent implements OnInit {
   usuario: SocialUser;
   haycliente = false;
   redsocial = false;
+  servicios: any = [];
   constructor(
-    private clienteService: ClienteService,
     private toastr: ToastrService,
     private authService: AuthService,
+    private clienteService: ClienteService,
+    private servicioService: ServicioService,
   ) { }
+  getservicios() {
+    this.servicioService.getServicios().subscribe(
+      res => {
+        if (res) {
+          this.servicios = res;
+        } else {
+          this.toastr.error('no se puede listar los servicios');
+        }
+      }
+    );
+  }
   loggout() {
     this.clienteService.loggout();
     if (this.redsocial === true) {
@@ -26,6 +40,7 @@ export class HeaderComponent implements OnInit {
     }
   }
   ngOnInit() {
+    this.getservicios();
     this.authService.authState.subscribe(
       (user) => {
         if (user) {

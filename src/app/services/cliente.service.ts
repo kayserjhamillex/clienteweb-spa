@@ -51,8 +51,8 @@ export class ClienteService {
     return this.http.get(`${this.apiUrlbase}/people/gmail/confirmation/${codigo}/${correo}`);
   }
 
-  getSendRecover(correo: string, codigo: string) {
-    return this.http.get(`${this.apiUrlbase}/cliente/gmail/recover/${correo}/${codigo}`);
+  getSendRecover(codigo: string, correo: string) {
+    return this.http.get(`${this.apiUrlbase}/cliente/gmail/recover/${codigo}/${correo}`);
   }
 
   getLogin(google: string) {

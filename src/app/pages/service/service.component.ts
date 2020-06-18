@@ -21,6 +21,8 @@ export class ServiceComponent implements OnInit {
       res => {
         if (res) {
           this.servicios = res;
+          console.log(res);
+
         } else {
           this.toastr.error('no se pueden listar los servicios');
         }
